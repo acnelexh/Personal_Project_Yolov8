@@ -52,10 +52,10 @@ def convertToYoloBBox(bbox, size):
     # This is taken from https://pjreddie.com/media/files/voc_label.py .
     dw = 1. / size[0]
     dh = 1. / size[1]
-    x = (bbox[0] + bbox[2]) / 2.0
-    y = (bbox[1] + bbox[3]) / 2.0
-    w = bbox[2] - bbox[0]
-    h = bbox[3] - bbox[1]
+    x = (bbox[0] + bbox[1]) / 2.0
+    y = (bbox[2] + bbox[3]) / 2.0
+    w = bbox[1] - bbox[0]
+    h = bbox[3] - bbox[2]
     x = x * dw
     w = w * dw
     y = y * dh
