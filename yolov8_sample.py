@@ -1,21 +1,10 @@
-from ultralyticsplus import YOLO, render_result
+from ultralytics import YOLO
 
-# load model
-model = YOLO('ultralyticsplus/yolov8s')
+# Load a model
+#model = YOLO("yolov8n.pt")  # load an official detection model
+#model = YOLO("yolov8n-seg.pt")  # load an official segmentation model
+model = YOLO("./runs/detect/test_run_1_epochs/weights/best.pt")  # load a custom model
 
-# set model parameters
-model.overrides['conf'] = 0.25  # NMS confidence threshold
-model.overrides['iou'] = 0.45  # NMS IoU threshold
-model.overrides['agnostic_nms'] = False  # NMS class-agnostic
-model.overrides['max_det'] = 1000  # maximum number of detections per image
-
-# set image
-image = 'https://github.com/ultralytics/yolov5/raw/master/data/images/zidane.jpg'
-
-# perform inference
-results = model.predict(image)
-
-# observe results
-print(results[0].boxes)
-render = render_result(model=model, image=image, result=results[0])
-render.show()
+# Track with the model
+results = model.track(source="https://youtu.be/Zgi9g1ksQHc", show=True) 
+results = model.track(source="https://youtu.be/Zgi9g1ksQHc", show=True, tracker="bytetrack.yaml") 
