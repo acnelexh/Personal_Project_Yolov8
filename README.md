@@ -46,11 +46,26 @@ yolo detect predict model=[model path] source=[image path]
 
 # Faster-RCNN
 
-For the Faster-RCNN training and evalution, I am using the mmdetection code base.
+For the Faster-RCNN training and evalution, I am using the [mmdetection](https://github.com/open-mmlab/mmdetection) code base.
 
 The configuration file I used for training the mode can be found [here](./mmdetection/configs/project/faster_rcnn.py)
 
-The here is the [training result directory](/home/chenzyu/Personal_Project_Yolov8/mmdetection/work_dir/faster_rcnn_r50_fpn_2x_coco_kitti_24_epochs)
+The here is the [training result directory](./mmdetection/work_dir/faster_rcnn_r50_fpn_2x_coco_kitti_24_epochs)
+
+## Training
+
+One can just run
+```
+cd mmdetection
+./tool/train.sh
+```
+But need to change the weight path in [train.sh](./mmdetection/tools/train.sh).
+
+## Evaluation
+Modify [test.sh](./mmdetection/tools/test.sh) so that the weight path is valid. Then run
+```
+./tool/test.sh
+```
 
 # Dataset
 
@@ -69,6 +84,11 @@ It consist of the following label
 8. Misc
 9. DontCare
 
-I used [fiftyone](https://github.com/voxel51/fiftyone) to convert the Kitti dataset to COCO format, and [kitti_for_yolo](https://github.com/oberger4711/kitti_for_yolo) to convert Kitti dataset to YOLO format.
+I used 
+
+- [fiftyone](https://github.com/voxel51/fiftyone) to convert the Kitti dataset to COCO format
+- [kitti_for_yolo](https://github.com/oberger4711/kitti_for_yolo) to convert Kitti dataset to YOLO format.
+
+Since yolo and mmdetection require different dataset format
 
 
