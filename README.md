@@ -61,6 +61,8 @@ cd mmdetection
 ```
 But need to change the weight path in [train.sh](./mmdetection/tools/train.sh).
 
+You can find the weight of the trained best model [here](./mmdetection/work_dir/faster_rcnn_r50_fpn_2x_coco_kitti_24_epochs/epoch_23.pth)
+
 ## Evaluation
 Modify [test.sh](./mmdetection/tools/test.sh) so that the weight path is valid. Then run
 ```
