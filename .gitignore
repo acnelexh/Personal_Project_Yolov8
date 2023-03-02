@@ -1,4 +1,4 @@
-datasets/*
+*.png
 env/
 results/
 data/kitti/data/*

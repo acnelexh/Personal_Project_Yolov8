@@ -1,0 +1,21 @@
+train: ./kitti_yolo/train/images/
+val:  ./kitti_yolo/valid/images/
+test: ./kitti_yolo/test/images/
+
+# number of classes
+nc: 9
+
+# class names
+names: ["pedestrian", "cyclist", "car", "van", "truck", "person_sitting", "tram", "misc", "dont_care"]
+
+# CLAZZ_NUMBERS = {
+#             KEY_PEDESTRIAN : 0,
+#             KEY_CYCLIST : 1,
+#             KEY_CAR : 2,
+#             KEY_VAN : 3,
+#             KEY_TRUCK: 4,
+#             KEY_PERSON_SITTING: 5,
+#             KEY_TRAM: 6,
+#             KEY_MISC: 7,
+#             KEY_DONT_CARE : 8
+#         }

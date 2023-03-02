@@ -1,0 +1,16 @@
+{
+    "name": "kitti",
+    "zoo_dataset": "fiftyone.zoo.datasets.base.KITTIDataset",
+    "dataset_type": "fiftyone.types.dataset_types.KITTIDetectionDataset",
+    "num_samples": 14999,
+    "downloaded_splits": {
+        "train": {
+            "split": "train",
+            "num_samples": 7481
+        },
+        "test": {
+            "split": "test",
+            "num_samples": 7518
+        }
+    }
+}
