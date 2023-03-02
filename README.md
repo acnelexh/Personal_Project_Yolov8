@@ -5,6 +5,11 @@ It consist of two parts
 (1) Yolo v8
 
 For the Yolo v8 training and evaluation, I am using the ultranalytics code base.
+The pretrained Yolo v8 on image net can be found at 
+
+[Yolov8n small model] (./yolo/yolov8n.pt)
+
+[Yolov8n large model] (./yolo/yolov8l.pt)
 
 (2) Faster-RCNN
 
