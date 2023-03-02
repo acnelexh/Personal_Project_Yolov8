@@ -5,11 +5,11 @@ import os
 # Train YOLOv8 on kitti for 10 epochs
 
 batch_size = 16
-epochs = 24
+epochs = 50
 learning_rate = 1E-3
 img_size = 640
 data_path = os.path.normpath('/home/chenzyu/datasets/kitti_yolo')
-weight_path = os.path.normpath('/home/chenzyu/Personal_Project_Yolov8/yolo/kitti/train/weights/last.pt')
+weight_path = os.path.normpath('/home/chenzyu/Personal_Project_Yolov8/yolo/yolov8l.pt')
 
 model = YOLO(weight_path)
 
@@ -20,6 +20,6 @@ model.train(
     imgsz=img_size,
     save=True,
     pretrained=True,
-    project='kitti_10more',
+    project='kitti_50_epochs',
     lr0=learning_rate,
     cos_lr=True)
