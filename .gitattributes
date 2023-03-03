@@ -1,0 +1,1 @@
+mmdetection/work_dir/faster_rcnn_r50_fpn_2x_coco_kitti_24_epochs/epoch_23.pth filter=lfs diff=lfs merge=lfs -text
